@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(234, 234, 234);
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+.left-column, .center-column, .right-column {
+    padding: 20px;
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.left-column, .right-column {
+    border-radius: 8px;
+}
+
+.left-column h2, .right-column h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    max-width: 800px;
+}
+
+.whats-on-your-mind-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.profile-and-textarea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.whats-on-your-mind textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    flex-grow: 1;
+}
+
+.upload-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.upload-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.upload-icon input[type="file"] {
+    display: none;
+}
+
+.post-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-button:hover {
+    background-color: darkblue;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgb(33, 33, 68);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 80px;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-right: 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    padding-right: 40px;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #555;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-menu a img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 5px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.nav-menu a:hover img {
+    filter: brightness(0);
+    border-radius: 8px;
+}
+
+/* Profile Style */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-container:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-icon img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: right;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-name::before {
+    content: '▼';
+    font-size: 10px;
+}
+
+.profile-status {
+    font-size: 12px;
+    opacity: 0.6;
+}
