@@ -71,18 +71,18 @@ $user_profile = [
     'profile_picture' => htmlspecialchars($_SESSION['profile_picture'])
 ];
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBSPiLink</title>
+    <title>Announcement</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
+<header>
         <nav>
             <div class="logo">
                 <img src="Assets/logo.png" alt="Logo">
@@ -135,27 +135,7 @@ $user_profile = [
             </ul>
         </div>
         <div class="center-column">
-            <div class="whats-on-your-mind-container">
-                <div class="whats-on-your-mind">
-                    <div class="profile-and-textarea">
-                        <div class="profile">
-                            <img src="uploads/<?php echo $user_profile['profile_picture']; ?>" alt="Profile" class="profile-img">
-                        </div>
-                        <textarea placeholder="What's on your mind?" rows="3"></textarea>
-                    </div>
-                    <div class="upload-icons">
-                        <label for="upload-photo" class="upload-icon">
-                            <img src="Assets/icons8-photo-gallery-100.png" alt="Upload Photo">
-                            <input type="file" id="upload-photo" accept="image/*" hidden>
-                        </label>
-                        <label for="upload-video" class="upload-icon">
-                            <img src="Assets/icons8-video-100.png" alt="Upload Video">
-                            <input type="file" id="upload-video" accept="video/*" hidden>
-                        </label>
-                    </div>
-                    <button class="post-button">Post</button>
-                </div>
-            </div>
+            <h2>Announcement</h2>
         </div>
         <div class="right-column">
             <h2>Friend Suggestions</h2>
@@ -184,5 +164,4 @@ $user_profile = [
 
     <script src="script.js"></script>
 </body>
-
 </html>
